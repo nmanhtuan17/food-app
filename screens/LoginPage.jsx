@@ -73,11 +73,8 @@ const LoginPage = ({ navigation }) => {
                     <View style={styles.backBTN} >
                         <BackBTN onPress={() => { navigation.goBack() }} />
                     </View>
-                    <Image
-                        source={require('../assets/images/bk.png')}
-                        style={styles.image}
-                    />
-                    <Text style={styles.title}>Unlimited Luxurious Furniture</Text>
+                    
+                    <Text style={styles.title}>Login you account</Text>
                     <Formik
                         initialValues={{ email: '', password: '' }}
                         validationSchema={validationSchema}
@@ -177,7 +174,8 @@ const styles = StyleSheet.create({
         fontSize: SIZES.large,
         color: COLORS.primary,
         marginBottom: SIZES.xxLarge,
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 50
 
     },
     wrapper: {

@@ -34,14 +34,9 @@ const Home = ({navigation}) => {
         <SafeAreaView>
             <View style={styles.appBarWrapper}>
                 <View style={styles.appBar}>
-                    <Ionicons name='location-outline' size={24} />
-
                     <Text style={styles.location}> {userData ? userData.location : 'Ha Noi'} </Text>
 
                     <View style={{ alignItems: 'flex-end' }}>
-                        <View style={styles.cartCount}>
-                            <Text style={styles.cartNumber}> {state.countCart !== 0 && state.countCart} </Text>
-                        </View>
                         <TouchableOpacity onPress={()=> {
                             if(userLogin){
                                 navigation.navigate('Cart')

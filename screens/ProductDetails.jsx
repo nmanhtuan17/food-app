@@ -63,11 +63,11 @@ const ProductDetails = ({ route, navigation }) => {
             <View style={styles.container}>
                 <View style={styles.upperRow}>
                     <TouchableOpacity onPress={() => { navigation.goBack() }} >
-                        <Ionicons name='chevron-back-circle' size={30} color={COLORS.primary} />
+                        <Ionicons name='chevron-back-circle' size={30} color={COLORS.white} />
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={() => { }} >
-                        <Ionicons style={{ marginRight: 16 }} name='heart' size={30} color={COLORS.primary} />
+                        <Ionicons style={{ marginRight: 16 }} name='heart' size={30} color={COLORS.white} />
                     </TouchableOpacity>
                 </View>
 
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     buyBtn: {
         padding: SIZES.small -4,
         width: SIZES.width*0.7,
-        backgroundColor: 'black',
+        backgroundColor: COLORS.primary,
         alignItems: 'center',
         borderRadius: SIZES.xxLarge
     },
@@ -293,7 +293,7 @@ const styles = StyleSheet.create({
     addToCart: {
         padding: SIZES.small,
         width: SIZES.width*0.15,
-        backgroundColor: 'black',
+        backgroundColor: COLORS.primary,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: SIZES.xsLarge

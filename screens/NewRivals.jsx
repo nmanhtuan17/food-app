@@ -24,11 +24,9 @@ const NewRivals = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: COLORS.lightWhite
     },
     wrapper: {
         flex: 1,
-        backgroundColor: COLORS.lightWhite
     },
     upperRow: {
         width: SIZES.width - 50,

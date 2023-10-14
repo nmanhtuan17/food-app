@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
       height: 240,
       borderRadius: SIZES.medium,
       marginEnd: 22,
-      backgroundColor: COLORS.secondary
+      backgroundColor: '#fff'
    },
    imageContainer: {
       flex: 1,
@@ -106,7 +106,8 @@ const styles = StyleSheet.create({
    price: {
       fontFamily: 'bold',
       fontSize: SIZES.medium,
-      marginBottom: 2
+      marginBottom: 2,
+      color: COLORS.price
    },
    addBtn: {
       position: 'absolute',

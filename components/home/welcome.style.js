@@ -5,9 +5,9 @@ const styles = StyleSheet.create({
    container: {
       width: "100%"
    },
-   welcomeTxt: (color, top) => ({
+   welcomeTxt: (color, top, fontSize) => ({
       fontFamily: 'bold',
-      fontSize: SIZES.xsLarge,
+      fontSize: fontSize,
       marginTop: top,
       color: color,
       marginHorizontal: SIZES.small
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'center',
       alignContent: 'center',
-      backgroundColor: COLORS.secondary,
+      backgroundColor: COLORS.lightWhite,
       marginVertical: SIZES.medium,
       marginHorizontal: SIZES.medium,
       borderRadius: SIZES.medium,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
    },
    searchWrapper: {
       flex: 1,
-      backgroundColor: COLORS.secondary,
+      backgroundColor: COLORS.lightWhite,
       marginRight: SIZES.small,
       borderRadius: SIZES.small
    },

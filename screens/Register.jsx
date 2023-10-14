@@ -85,11 +85,7 @@ const Register = ({navigation}) => {
                     <View style={styles.backBTN} >
                         <BackBTN onPress={() => { navigation.goBack() }} />
                     </View>
-                    <Image
-                        source={require('../assets/images/bk.png')}
-                        style={styles.image}
-                    />
-                    <Text style={styles.title}>Unlimited Luxurious Furniture</Text>
+                    <Text style={styles.title}>Sign Up</Text>
                     <Formik
                         initialValues={{ email: '', password: '', fullname: '', username: '', location: '', passwordConfirmation: '' }}
                         validationSchema={validationSchema}
@@ -305,7 +301,8 @@ const styles = StyleSheet.create({
         fontSize: SIZES.large,
         color: COLORS.primary,
         marginBottom: SIZES.xxLarge,
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 50
 
     },
     wrapper: {

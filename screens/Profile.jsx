@@ -64,7 +64,7 @@ const Profile = ({ navigation }) => {
             <View style={styles.container}>
                 <View style={{ width: '100%' }}>
                     <Image
-                        source={require('../assets/images/space.jpg')}
+                        source={require('../assets/images/bg.webp')}
                         style={styles.image}
                     />
                 </View>

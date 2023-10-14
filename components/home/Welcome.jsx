@@ -9,7 +9,8 @@ const Welcome = () => {
    return (
       <View>
          <View style={styles.container}>
-            <Text style={styles.welcomeTxt(COLORS.black, SIZES.xSmall)}>Find Your Favourites Food</Text>
+            <Text style={styles.welcomeTxt(COLORS.black, SIZES.xSmall, SIZES.xsLarge)}>Delicious Food For You</Text>
+            <Text style={styles.welcomeTxt(COLORS.gray, SIZES.xSmall, SIZES.large)}>Find your favourites food</Text>
          </View>
 
          <View style={styles.searchContainer}>

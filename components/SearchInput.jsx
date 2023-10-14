@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'center',
       alignContent: 'center',
-      backgroundColor: COLORS.secondary,
+      backgroundColor: COLORS.lightWhite,
       marginVertical: SIZES.medium,
       borderRadius: SIZES.medium,
       height: 50
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
    },
    searchWrapper: {
       flex: 1,
-      backgroundColor: COLORS.secondary,
+      backgroundColor: COLORS.lightWhite,
       marginRight: SIZES.small,
       borderRadius: SIZES.small
    },
