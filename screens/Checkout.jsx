@@ -24,6 +24,7 @@ const validationSchema = Yup.object().shape({
 const Checkout = ({ navigation, route }) => {
     const [loader, setLoader] = useState(false)
     const {product} = route.params
+    console.log(product);
     const inValidForm = () => {
         Alert.alert(
             "Invalid Form",

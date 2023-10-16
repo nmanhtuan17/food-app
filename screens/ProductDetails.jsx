@@ -13,7 +13,7 @@ const ProductDetails = ({ route, navigation }) => {
     
     const [count, setCount] = React.useState(1)
     const product = React.useMemo(() => {
-        return state.products.filter((item) => item._id === id)
+        return state.products.find((item) => item._id === id)
     }, [state])
     const handlePlus = () => {
         setCount(count + 1)
@@ -29,7 +29,7 @@ const ProductDetails = ({ route, navigation }) => {
            try {
               const newCart = {
                  userId: id,
-                 cartItem: product[0]._id,
+                 cartItem: product._id,
                  qty: count
               }
               const res = await axios.post('https://food-app-328l.onrender.com/cart', newCart)
@@ -55,6 +55,27 @@ const ProductDetails = ({ route, navigation }) => {
            } catch (error) {
               console.log(error);
            }
+        }else{
+            navigation.navigate('Profile')
+        }
+     }
+
+     const handleBuy = async () => {
+        const id = await AsyncStorage.getItem('id')
+        if(id !== null){
+           try {
+              const newCart = {
+                 userId: id,
+                 cartItem: product._id,
+                 qty: count
+              }
+              const res = await axios.post('https://food-app-328l.onrender.com/cart', newCart)
+              navigation.navigate('Cart')
+           } catch (error) {
+              console.log(error);
+           }
+        }else{
+            navigation.navigate('Profile')
         }
      }
     return (
@@ -73,7 +94,7 @@ const ProductDetails = ({ route, navigation }) => {
 
                 <View style={styles.imageContainer}>
                     <Image
-                        source={{uri: product[0].imageUrl}}
+                        source={{uri: product.imageUrl}}
                         style={styles.image}
                     />
                 </View>
@@ -81,9 +102,9 @@ const ProductDetails = ({ route, navigation }) => {
 
                 <View style={styles.details}>
                     <View style={styles.titleRow}>
-                        <Text style={styles.title}>{product[0].title}</Text>
+                        <Text style={styles.title}>{product.title}</Text>
                         <View style={styles.priceWrapper}>
-                            <Text style={styles.price}>{product[0].price} đ</Text>
+                            <Text style={styles.price}>{product.price} đ</Text>
                         </View>
                     </View>
 
@@ -127,7 +148,7 @@ const ProductDetails = ({ route, navigation }) => {
                             <View style={styles.locationWrapper}>
                                 <Ionicons name='location-outline' size={24} />
 
-                                <Text style={styles.locationText}> {product[0].product_location} </Text>
+                                <Text style={styles.locationText}> {product.product_location} </Text>
                             </View>
                         </TouchableOpacity>
 
@@ -141,7 +162,7 @@ const ProductDetails = ({ route, navigation }) => {
 
 
                     <View style={styles.checkOutRow}>
-                        <TouchableOpacity onPress={() => {}} style={styles.buyBtn}>
+                        <TouchableOpacity onPress={() => handleBuy()} style={styles.buyBtn}>
                             <Text style={styles.buyBtnText}>BUY</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.addToCart} onPress={()=> handleAddCart()}>
